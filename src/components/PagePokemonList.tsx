@@ -8,6 +8,7 @@ const columns: GridColDef[] = [
   {
     field: 'name',
     headerName: 'Name',
+    width: 300
   },
 ];
 
