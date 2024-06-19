@@ -1,8 +1,8 @@
-import { useCallback } from "react";
-import { useQuery } from "./useQuery";
-import PokeAPI from "pokeapi-typescript";
+import { useCallback } from 'react';
+import { useQuery } from './useQuery';
+import PokeAPI from 'pokeapi-typescript';
 
-export function usePokemonList(){
+export function usePokemonList() {
   const queryKey = ['pokemon'];
   const queryFn = useCallback(async () => {
     return PokeAPI.Pokemon.listAll();
@@ -10,6 +10,6 @@ export function usePokemonList(){
 
   return useQuery({
     queryKey,
-    queryFn
-  })
+    queryFn,
+  });
 }
