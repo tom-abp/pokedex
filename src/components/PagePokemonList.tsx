@@ -1,3 +1,11 @@
+import { usePokemonList } from "../api/usePokemonList"
+
 export function PagePokemonList(){
-  return <p>Pokemon List</p>
+  const {data} = usePokemonList();
+
+  return (
+    <pre>
+      {JSON.stringify(data, null, 2)}
+    </pre>
+  );
 }

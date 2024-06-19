@@ -2,7 +2,7 @@ import { AppBar, Toolbar, Typography } from "@mui/material";
 
 export function Header(){
   return(
-    <AppBar position="fixed">
+    <AppBar position="static">
       <Toolbar>
         <Typography variant="h6">Pokedex</Typography>
       </Toolbar>

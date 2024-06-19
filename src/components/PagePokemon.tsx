@@ -1,7 +1,13 @@
 import { useParams } from "react-router-dom"
+import { usePokemon } from "../api/usePokemon";
 
 export function PagePokemon(){
   const {name} = useParams();
+  const {data} = usePokemon(name);
 
-  return <p>Pokemon: {name}</p>
+  return (
+    <pre>
+      {JSON.stringify(data, null, 2)}
+    </pre>
+  )
 }
